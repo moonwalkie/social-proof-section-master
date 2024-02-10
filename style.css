@@ -23,14 +23,14 @@ body {
 .hero .intro h1 {
   color: #502050;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 3.44rem;
   letter-spacing: -0.1rem;
   line-height: 3rem;
 }
 .hero .intro p {
   color: #937b92;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6rem;
   letter-spacing: -0.02rem;
 }
@@ -58,7 +58,7 @@ body {
 }
 .hero .ratings .container p {
   color: #502050;
-  font-size: 17px;
+  font-size: 1.06rem;
   font-weight: 700;
 }
 .hero .ratings .container.one {
@@ -87,6 +87,16 @@ body {
 
 .reviews {
   display: flex;
+}
+
+@media screen and (min-width: 1450px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
