@@ -16,6 +16,9 @@ body {
     padding: 7.5rem 10rem;
     font-family: $font-stack;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hero {
@@ -85,8 +88,6 @@ body {
     }
 }
 
-
-
 .bg-desktop {
     z-index: -1;
 
@@ -108,9 +109,80 @@ body {
 
 .reviews {
     display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+
+    .card {
+        background-color: $p-dark-magenta;
+        padding: 2.4rem 2.15rem;
+        width: 20rem;
+        height: 10rem;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.6rem;
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+                margin-top: 0.2rem;
+                font-size: 1.05rem;
+
+                .client-name {
+                    color: $n-white;
+                    font-weight: 700;
+                }
+
+                .verified-buyer {
+                    color: $p-soft-pink;
+                }
+            }
+
+            img {
+                border-radius: 50%;
+                width: 2.5rem;
+            }
+        }
+
+        .review-content {
+            color: $n-l-gray-magenta;
+            font-weight: 500;
+            line-height: 1.4rem;
+        }
+    }
+
+    .card.one {
+        margin-top: -1rem;
+    }
+
+    .card.three {
+        margin-top: 1rem;
+    }
 }
 
-@media screen and (min-width: 1920px) {
+.attribution {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: $p-dark-magenta;
+        transition: color ease-in-out 0.2s;
+    }
+
+    a:hover {
+        color: $p-soft-pink;
+    }
+}
+
+@media screen and (min-width: 1450px) {
     body {
         max-width: 1440px;
         margin: 0 auto;
